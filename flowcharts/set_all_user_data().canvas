@@ -10,7 +10,7 @@
 		{"id":"c2fa21a68feb16c4","type":"text","text":"user_claims() must be valid","x":-73,"y":-100,"width":279,"height":60,"color":"3"},
 		{"id":"e3caf707d8af684d","type":"text","text":"supabase_populate_saved_hospital_details()","x":-600,"y":260,"width":420,"height":60,"color":"1"},
 		{"id":"55b5842e11f39380","type":"text","text":"supabase_get_user_reports()","x":-600,"y":380,"width":420,"height":60,"color":"1"},
-		{"id":"46076bf56ec118cf","type":"text","text":"# Setting User Data\nIn BaseState, all user data is stored in three variables...\n- user_info\n- saved_hospitals\n- user_reports\n\n","x":-108,"y":-420,"width":348,"height":250,"color":"6"},
+		{"id":"46076bf56ec118cf","type":"text","text":"# Setting User Data\nIn BaseState, all user data is stored in three variables...\n- [[BaseState.user_info.canvas|BaseState.user_info]]\n- saved_hospitals\n- user_reports\n\n","x":-108,"y":-420,"width":348,"height":250,"color":"6"},
 		{"id":"c148d7c72f6a9a9d","type":"text","text":"# User Data Set\n- user_info contains data in /users table\n- saved_hospitals contains populated hospital data for dashboard from /hospitals\n- user_reports contains report data for dashboard from /reports\n\n","x":-340,"y":540,"width":348,"height":320,"color":"6"},
 		{"id":"8993d6083aaf2d2f","type":"text","text":"# Exception Handling\nset_all_user_data() should only be used within a try except block as the function will raise exceptions but doesn't handle exceptions.\n- DuplicateUserError - pulled multiple user info from one user_id.\n- ReadError - expected to retrieve data but recieved empty response.\n- RequestError - request to database failed.\n\n\n","x":102,"y":540,"width":348,"height":420,"color":"6"}
 	],

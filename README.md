@@ -1,2 +1,2 @@
 # nursereports-docs
-Structures, charts, and design principles for nursereports.org.
+Structures, flowcharts, diagrams, and design principles for nursereports.org.
