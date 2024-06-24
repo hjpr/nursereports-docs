@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"5350b2e1c876bf06","type":"text","text":"# Login Flow\nLogin flow addresses login method.\n- Is user logging in via...\n\t1. Email/Pass\n\t2. SSO\n- Does user need to create an account?\n\nFlow is triggered off a form_submit button in the login modal or off clicking one of the SSO icons.\n\n","x":-433,"y":-400,"width":456,"height":320,"color":"6"},
+		{"id":"4114a87efad32124","type":"text","text":"event_state_login_with_sso()","x":-771,"y":110,"width":338,"height":60},
+		{"id":"2166634e4b1005f7","type":"text","text":"login with SSO","x":-520,"y":-20,"width":191,"height":60,"color":"4"},
+		{"id":"b745b3ce6be96e83","type":"text","text":"returning from redirect, SSO embeds access_token and refresh_token into URL. handled via standard_flow","x":-771,"y":230,"width":338,"height":130,"color":"4"},
+		{"id":"47b084da21db37c8","type":"text","text":"event_state_standard_flow()","x":-748,"y":430,"width":293,"height":60},
+		{"id":"ca955ccd65292bac","type":"text","text":"event_state_login_modal_submit()","x":-42,"y":80,"width":338,"height":60},
+		{"id":"33b1a065251b2397","type":"text","text":"create an account","x":240,"y":200,"width":219,"height":60,"color":"4"},
+		{"id":"184e154587701ef0","type":"text","text":"event_state_email_create_account()","x":321,"y":330,"width":340,"height":60},
+		{"id":"bb3530a089bea019","type":"text","text":"supabase_create_account_with_email()","x":740,"y":400,"width":359,"height":60,"color":"1"},
+		{"id":"e63e146736a70441","type":"text","text":"# Login Flow Results\nSuccessful login results in\n1. Access_token and refresh_token stored in state. ✅\n2. User_info stored in state. ✅\n3. User is redirected to either the onboard page or dashboard depending on report status. ✅","x":-645,"y":860,"width":381,"height":300,"color":"6"},
+		{"id":"21a6246c1c9d500f","type":"text","text":"supabase_login_with_email()","x":96,"y":430,"width":288,"height":60,"color":"1"},
+		{"id":"24d57b0132fb8255","type":"text","text":"# Create Account Results\nEmail gets sent with link. User clicks link containing a supabase auth code. Then user gets redirected back with an access_token and refresh_token to be handled via standard_flow.\n","x":274,"y":860,"width":435,"height":264,"color":"6"},
+		{"id":"eac05a3346a3d6e3","type":"text","text":"# Exception Handling\n- CreateUserError - unable to create user entry in database.\n- DuplicateUserError - pulled more than one user using user_id.\n- LoginAttemptError - user provided incorrect credentials\n- ReadError - should have been user information but wasn't.\n- RequestError - request to database failed.","x":-191,"y":860,"width":393,"height":360,"color":"6"},
+		{"id":"82a830e5335b10b5","type":"text","text":"login using email","x":-168,"y":200,"width":191,"height":60,"color":"4"},
+		{"id":"bb6b6bc35d4cc1c2","type":"text","text":"event_state_login_with_email()","x":-324,"y":330,"width":313,"height":60},
+		{"id":"f945c492d2265e43","type":"text","text":"set_all_user_data()","x":-272,"y":460,"width":210,"height":50},
+		{"id":"ec3d361c37ba9695","type":"text","text":"redirect_user_to_onboard_or_dashboard()","x":-364,"y":580,"width":395,"height":60}
+	],
+	"edges":[
+		{"id":"4746cc90e4730b3d","fromNode":"5350b2e1c876bf06","fromSide":"bottom","toNode":"ca955ccd65292bac","toSide":"top"},
+		{"id":"cc5bcf508b797605","fromNode":"ca955ccd65292bac","fromSide":"bottom","toNode":"184e154587701ef0","toSide":"top"},
+		{"id":"9bdb09ca5326e045","fromNode":"ca955ccd65292bac","fromSide":"bottom","toNode":"bb6b6bc35d4cc1c2","toSide":"top"},
+		{"id":"124cd04a470be332","fromNode":"5350b2e1c876bf06","fromSide":"bottom","toNode":"4114a87efad32124","toSide":"top"},
+		{"id":"2b1f1071d34b7485","fromNode":"4114a87efad32124","fromSide":"bottom","toNode":"47b084da21db37c8","toSide":"top"},
+		{"id":"e85a25dd891bb65a","fromNode":"184e154587701ef0","fromSide":"right","toNode":"bb3530a089bea019","toSide":"left"},
+		{"id":"7ef5db3e6736e3c5","fromNode":"bb3530a089bea019","fromSide":"left","toNode":"184e154587701ef0","toSide":"right"},
+		{"id":"3a1e9ed6d5731d03","fromNode":"bb6b6bc35d4cc1c2","fromSide":"right","toNode":"21a6246c1c9d500f","toSide":"left"},
+		{"id":"33b8d468678bf77f","fromNode":"21a6246c1c9d500f","fromSide":"left","toNode":"bb6b6bc35d4cc1c2","toSide":"right"},
+		{"id":"f20d11e5286ecdab","fromNode":"bb6b6bc35d4cc1c2","fromSide":"bottom","toNode":"f945c492d2265e43","toSide":"top"},
+		{"id":"67b5d8e83e0801c5","fromNode":"f945c492d2265e43","fromSide":"bottom","toNode":"ec3d361c37ba9695","toSide":"top"},
+		{"id":"466dc572ba957fd1","fromNode":"ec3d361c37ba9695","fromSide":"bottom","toNode":"e63e146736a70441","toSide":"top"},
+		{"id":"bc3a925d7ed81787","fromNode":"47b084da21db37c8","fromSide":"bottom","toNode":"e63e146736a70441","toSide":"top"},
+		{"id":"b8fc6f9a123b11dd","fromNode":"184e154587701ef0","fromSide":"bottom","toNode":"24d57b0132fb8255","toSide":"top"}
+	]
+}

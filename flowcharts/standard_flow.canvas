@@ -1,0 +1,42 @@
+{
+	"nodes":[
+		{"id":"04bca794e262c808","type":"text","text":"authenticated_missing_info_flow()","x":-148,"y":-80,"width":336,"height":60},
+		{"id":"561c0b1eb22f3eae","type":"text","text":"BaseState.event_state_standard_flow()\n","x":-159,"y":-400,"width":360,"height":60},
+		{"id":"b1bc8e6b59836d84","type":"text","text":"set_all_user_data()","x":-104,"y":120,"width":250,"height":60},
+		{"id":"f532ef28853ad759","type":"text","text":"check_claims_for_expiring_soon()","x":-141,"y":20,"width":323,"height":55},
+		{"id":"0ff045223d5b217d","type":"text","text":"authenticated_flow()","x":-599,"y":-80,"width":250,"height":60},
+		{"id":"93114d4451f05e5c","type":"text","text":"check_claims_for_expiring_soon()","x":-639,"y":20,"width":330,"height":55},
+		{"id":"22cdf09f848a02d3","type":"text","text":"check_access()","x":-599,"y":220,"width":250,"height":60},
+		{"id":"665b8b41eefd57aa","type":"text","text":"user_claims valid, and user_info present","x":-391,"y":-240,"width":232,"height":60,"color":"4"},
+		{"id":"bbb009f1524e7d92","type":"text","text":"no valid user_claims","x":240,"y":-240,"width":250,"height":60,"color":"4"},
+		{"id":"7d0fabfa5a09ca82","type":"text","text":"unauthenticated_flow()","x":519,"y":-80,"width":250,"height":60},
+		{"id":"2523070af99f759a","type":"text","text":"handle_sso_redirect()","x":519,"y":220,"width":250,"height":60},
+		{"id":"f49dda03d1a2804e","type":"text","text":"parse url for access_token and refresh_token","x":860,"y":97,"width":245,"height":108,"color":"1"},
+		{"id":"0d2fbca81f986b8a","type":"text","text":"user_claims valid","x":270,"y":61,"width":190,"height":73,"color":"4"},
+		{"id":"54c0c4fd95eb64da","type":"text","text":"if no info stored in user_claims, user might be redirecting from SSO","x":519,"y":55,"width":250,"height":95,"color":"4"},
+		{"id":"47d76eddd4a679ef","type":"text","text":"user_claims valid but no user_info_present","x":-104,"y":-210,"width":250,"height":60,"color":"4"},
+		{"id":"6616053f6dd2aa87","type":"text","text":"# Standard Flow\nStandard flow addresses three questions.\n-  What is the status of the user_claims? user_claims is a derivative of the JWT access_token from supabase.\n- What is the status of user_info?\n-  Is the user allowed to access the page that is requested?\n\nOn each page load, the standard flow will fire via an on_load event handler...","x":-268,"y":-800,"width":577,"height":320,"color":"6"},
+		{"id":"8d4703714a8d531f","type":"text","text":"check_access()","x":-104,"y":220,"width":250,"height":60},
+		{"id":"7cda321f9d47f65b","type":"text","text":"redirect_user_to_onboard_or_dashboard()","x":-182,"y":320,"width":405,"height":60},
+		{"id":"dce6a8e98e5f4ebe","type":"text","text":"# Standard Flow Results\n1. User_claims are valid. ✅\n2. User_info is populated. ✅\n3. User is where they are supposed to be. ✅","x":-509,"y":520,"width":530,"height":180,"color":"6"},
+		{"id":"bb440bd169413997","type":"text","text":"# Exception Handling\n- DuplicateUserError - pulled too many user entries using one user_id.\n- ExpiredError - access_token is expired.\n- LoginError - user is not logged in and attempting to access page requiring login.\n- ReadError - expected to real information from database that returned nothing.\n- ReportError - user is attempting to access area of site requiring that user previously submitted a report.\n- RequestError - database request failed.\n- TokenError - unable to format or refresh tokens from JWT.\n","x":146,"y":520,"width":530,"height":400,"color":"6"}
+	],
+	"edges":[
+		{"id":"1bdeeb105c2ae046","fromNode":"561c0b1eb22f3eae","fromSide":"bottom","toNode":"0ff045223d5b217d","toSide":"top"},
+		{"id":"e24287485e5ba4bf","fromNode":"561c0b1eb22f3eae","fromSide":"bottom","toNode":"04bca794e262c808","toSide":"top"},
+		{"id":"af4b1b45d139a91c","fromNode":"561c0b1eb22f3eae","fromSide":"bottom","toNode":"7d0fabfa5a09ca82","toSide":"top"},
+		{"id":"8b14170b6eb386f7","fromNode":"0ff045223d5b217d","fromSide":"bottom","toNode":"93114d4451f05e5c","toSide":"top"},
+		{"id":"d79510c24fb9875a","fromNode":"04bca794e262c808","fromSide":"bottom","toNode":"f532ef28853ad759","toSide":"top"},
+		{"id":"fcc28bf242a42118","fromNode":"93114d4451f05e5c","fromSide":"bottom","toNode":"22cdf09f848a02d3","toSide":"top"},
+		{"id":"02907efd9be17184","fromNode":"f532ef28853ad759","fromSide":"bottom","toNode":"b1bc8e6b59836d84","toSide":"top"},
+		{"id":"a045731af7c496bc","fromNode":"b1bc8e6b59836d84","fromSide":"bottom","toNode":"8d4703714a8d531f","toSide":"top"},
+		{"id":"7fd2e7eff98d52a1","fromNode":"7d0fabfa5a09ca82","fromSide":"bottom","toNode":"2523070af99f759a","toSide":"top"},
+		{"id":"375079d8b72f68c6","fromNode":"2523070af99f759a","fromSide":"right","toNode":"f49dda03d1a2804e","toSide":"left"},
+		{"id":"29b3a0637cac78e7","fromNode":"f49dda03d1a2804e","fromSide":"left","toNode":"2523070af99f759a","toSide":"right"},
+		{"id":"19c760fb7acbfa38","fromNode":"6616053f6dd2aa87","fromSide":"bottom","toNode":"561c0b1eb22f3eae","toSide":"top"},
+		{"id":"25c9907039dd23bb","fromNode":"2523070af99f759a","fromSide":"left","toNode":"04bca794e262c808","toSide":"right"},
+		{"id":"c9a7b1543ca69854","fromNode":"22cdf09f848a02d3","fromSide":"bottom","toNode":"dce6a8e98e5f4ebe","toSide":"top"},
+		{"id":"9d67954a474bf3fa","fromNode":"8d4703714a8d531f","fromSide":"bottom","toNode":"7cda321f9d47f65b","toSide":"top"},
+		{"id":"97762692dc7d770f","fromNode":"7cda321f9d47f65b","fromSide":"bottom","toNode":"dce6a8e98e5f4ebe","toSide":"top"}
+	]
+}
