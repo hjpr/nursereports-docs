@@ -14,8 +14,7 @@
 		{"id":"e07f95524180eadb","type":"text","text":"hosp_name","x":460,"y":622,"width":250,"height":60},
 		{"id":"62429023e5e399cb","type":"text","text":"hosp_state","x":460,"y":732,"width":250,"height":60},
 		{"id":"8a005669a68c90d9","type":"text","text":"user_id: uuid - jwt provided uuid","x":-20,"y":900,"width":286,"height":80},
-		{"id":"c5a65e5a1d9c3271","type":"text","text":"hash: str - hash of row to compare state -> database","x":-20,"y":1020,"width":286,"height":80},
-		{"id":"b06f8d2b28447073","type":"text","text":"BaseState.user_info: dict","x":-540,"y":306,"width":260,"height":60}
+		{"id":"b06f8d2b28447073","type":"text","text":"BaseState.user_info: dict","x":-620,"y":198,"width":260,"height":60}
 	],
 	"edges":[
 		{"id":"9dacc893b20a2aec","fromNode":"b06f8d2b28447073","fromSide":"right","toNode":"de95a944f4f20a06","toSide":"left"},
@@ -31,7 +30,6 @@
 		{"id":"d463ebb40a9d287f","fromNode":"b06f8d2b28447073","fromSide":"right","toNode":"7fafebe02b8fb29a","toSide":"left"},
 		{"id":"14e0756ebe4b5f30","fromNode":"b06f8d2b28447073","fromSide":"right","toNode":"8a005669a68c90d9","toSide":"left"},
 		{"id":"86efcf5cb69b0f2b","fromNode":"12891edad8e8e0fb","fromSide":"right","toNode":"e07f95524180eadb","toSide":"left"},
-		{"id":"4a831949b943124e","fromNode":"12891edad8e8e0fb","fromSide":"right","toNode":"62429023e5e399cb","toSide":"left"},
-		{"id":"098d3110f3b7f5c0","fromNode":"b06f8d2b28447073","fromSide":"right","toNode":"c5a65e5a1d9c3271","toSide":"left"}
+		{"id":"4a831949b943124e","fromNode":"12891edad8e8e0fb","fromSide":"right","toNode":"62429023e5e399cb","toSide":"left"}
 	]
 }
