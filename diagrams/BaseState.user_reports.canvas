@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"52c99e23bb1f0ad9","type":"text","text":"supabase_get_user_reports()","x":-283,"y":-447,"width":288,"height":60,"color":"1"},
+		{"id":"3a07303a49517c0e","type":"text","text":"BaseState.set_user_reports()","x":-282,"y":-333,"width":286,"height":60},
+		{"id":"8b7efc6df1e41783","type":"text","text":"BaseState.user_reports: list[dict]","x":-300,"y":-220,"width":322,"height":60},
+		{"id":"7a894a4f6bfcd6f3","type":"text","text":"report_id: str - uuid of report","x":280,"y":172,"width":306,"height":60},
+		{"id":"47ef4f04abb3ec9d","type":"text","text":"hospital_id: str - medicare id","x":280,"y":-15,"width":306,"height":60},
+		{"id":"8e361567946e2416","type":"text","text":"modified_at: str - time report was modified","x":280,"y":79,"width":306,"height":60},
+		{"id":"224e88c961a250ce","type":"text","text":"assign_select_unit: str - user selected unit","x":280,"y":-588,"width":306,"height":80},
+		{"id":"5e88e3f2b951f4d9","type":"text","text":"assign_input_unit_name: str - if unit not present, user entered unit","x":280,"y":-474,"width":306,"height":93},
+		{"id":"1ffe040a8b10b7b1","type":"text","text":"assign_select_area: str - user selected area","x":280,"y":-347,"width":306,"height":77},
+		{"id":"757bb833be82ed5f","type":"text","text":"assign_input_area: str - if area not present, user entered area","x":280,"y":-236,"width":306,"height":93},
+		{"id":"f3736a10a3d88905","type":"text","text":"created_at: str - time report was created","x":280,"y":-109,"width":306,"height":60},
+		{"id":"0a7d208af613a5b6","type":"text","text":"# Supabase\n- public.reports","x":-254,"y":-657,"width":230,"height":138,"color":"1"}
+	],
+	"edges":[
+		{"id":"bbfb7c83ffa614c2","fromNode":"52c99e23bb1f0ad9","fromSide":"bottom","toNode":"3a07303a49517c0e","toSide":"top"},
+		{"id":"d0c7669484fe8c6e","fromNode":"3a07303a49517c0e","fromSide":"bottom","toNode":"8b7efc6df1e41783","toSide":"top"},
+		{"id":"8b701b29b27b5172","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"224e88c961a250ce","toSide":"left"},
+		{"id":"274a7db3e6d3192c","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"5e88e3f2b951f4d9","toSide":"left"},
+		{"id":"bde232a1f281d15f","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"1ffe040a8b10b7b1","toSide":"left"},
+		{"id":"1f00daae471ffce2","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"757bb833be82ed5f","toSide":"left"},
+		{"id":"1fb83f667154921c","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"f3736a10a3d88905","toSide":"left"},
+		{"id":"06d8c40d8c02e13e","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"47ef4f04abb3ec9d","toSide":"left"},
+		{"id":"1e7f16ed6a70127a","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"8e361567946e2416","toSide":"left"},
+		{"id":"ed2ade5cee283d4a","fromNode":"8b7efc6df1e41783","fromSide":"right","toNode":"7a894a4f6bfcd6f3","toSide":"left"},
+		{"id":"9c0d7bd987681efa","fromNode":"0a7d208af613a5b6","fromSide":"bottom","toNode":"52c99e23bb1f0ad9","toSide":"top"}
+	]
+}
