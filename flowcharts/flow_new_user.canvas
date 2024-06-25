@@ -1,0 +1,38 @@
+{
+	"nodes":[
+		{"id":"b11adaaf382aa926","type":"text","text":"APRN","x":-500,"y":-51,"width":120,"height":50,"color":"4"},
+		{"id":"f63b3436e4dbae66","type":"text","text":"RN - Associates","x":-90,"y":-51,"width":200,"height":50,"color":"4"},
+		{"id":"2da100a82812e545","type":"text","text":"RN - Bachelors","x":-330,"y":-51,"width":180,"height":50,"color":"4"},
+		{"id":"1db650c06ad3affc","type":"text","text":"LPN/LVN","x":180,"y":-51,"width":140,"height":50,"color":"4"},
+		{"id":"1111ab5fe11305fc","type":"text","text":"Nursing student","x":380,"y":-51,"width":200,"height":50,"color":"4"},
+		{"id":"a121eea39dd595ce","type":"text","text":"# New User Flow\n- User creates an account via login modal.\n- User follows email link sent by via supabase.\n- User is redirected back to the main page and url containing tokens is processed by BaseState.unauthorized_flow","x":-240,"y":-580,"width":500,"height":220,"color":"6"},
+		{"id":"1cb2ca0905f466ca","type":"text","text":"OnboardState.event_state_submit_onboard()","x":-198,"y":-320,"width":416,"height":60},
+		{"id":"2eb25e0dab8e781c","type":"text","text":"Worked in hospital as nurse within the past year?","x":-298,"y":240,"width":270,"height":80,"color":"4"},
+		{"id":"92b84000dbea27ba","type":"text","text":"No hospital experience within past year.","x":52,"y":240,"width":270,"height":80,"color":"4"},
+		{"id":"ceb13a41ff77c1b6","type":"text","text":"Redirect to dashboard with full access","x":112,"y":462,"width":240,"height":83,"color":"4"},
+		{"id":"b3dca7355eb2ee52","type":"text","text":"# New User Flow Results\n- Users who have pertinent information have given a report and then given access.  ✅\n- Users who don't have reports are given access.  ✅\n","x":-363,"y":503,"width":330,"height":323,"color":"6"},
+		{"id":"ad7d2dbf9478b6fc","type":"text","text":"# Exception Handling\n- InvalidError - user left a field blank.\n- RequestError - request to database failed.","x":66,"y":697,"width":373,"height":163,"color":"6"},
+		{"id":"7ca5d0e0f42ed732","type":"text","text":"Redirect to submit report.","x":-293,"y":383,"width":260,"height":60,"color":"4"}
+	],
+	"edges":[
+		{"id":"f3a9498d4f840e13","fromNode":"a121eea39dd595ce","fromSide":"bottom","toNode":"1cb2ca0905f466ca","toSide":"top"},
+		{"id":"3d7a934d9c1ab243","fromNode":"1cb2ca0905f466ca","fromSide":"bottom","toNode":"b11adaaf382aa926","toSide":"top"},
+		{"id":"e05cc46d9a0766d6","fromNode":"1cb2ca0905f466ca","fromSide":"bottom","toNode":"2da100a82812e545","toSide":"top"},
+		{"id":"eae0977b6789e2bf","fromNode":"1cb2ca0905f466ca","fromSide":"bottom","toNode":"f63b3436e4dbae66","toSide":"top"},
+		{"id":"3f0e0598fc102d11","fromNode":"1cb2ca0905f466ca","fromSide":"bottom","toNode":"1db650c06ad3affc","toSide":"top"},
+		{"id":"581671ce4cd79da8","fromNode":"1cb2ca0905f466ca","fromSide":"bottom","toNode":"1111ab5fe11305fc","toSide":"top"},
+		{"id":"e993d68795edfa5a","fromNode":"b11adaaf382aa926","fromSide":"bottom","toNode":"2eb25e0dab8e781c","toSide":"top"},
+		{"id":"877125763ca8a21f","fromNode":"2da100a82812e545","fromSide":"bottom","toNode":"2eb25e0dab8e781c","toSide":"top"},
+		{"id":"167ebb43091b1a17","fromNode":"f63b3436e4dbae66","fromSide":"bottom","toNode":"2eb25e0dab8e781c","toSide":"top"},
+		{"id":"8dbbed7373c2ca3d","fromNode":"1db650c06ad3affc","fromSide":"bottom","toNode":"2eb25e0dab8e781c","toSide":"top"},
+		{"id":"ccd2f16e9c34c2ac","fromNode":"1111ab5fe11305fc","fromSide":"bottom","toNode":"ceb13a41ff77c1b6","toSide":"right"},
+		{"id":"5bb40c256436e4fa","fromNode":"b11adaaf382aa926","fromSide":"bottom","toNode":"92b84000dbea27ba","toSide":"top"},
+		{"id":"671dc6ed11e3aa1a","fromNode":"2da100a82812e545","fromSide":"bottom","toNode":"92b84000dbea27ba","toSide":"top"},
+		{"id":"1ba0e5d6bbf04713","fromNode":"92b84000dbea27ba","fromSide":"bottom","toNode":"ceb13a41ff77c1b6","toSide":"top"},
+		{"id":"694bbace60e80f22","fromNode":"f63b3436e4dbae66","fromSide":"bottom","toNode":"92b84000dbea27ba","toSide":"top"},
+		{"id":"eddd37543679d6f6","fromNode":"1db650c06ad3affc","fromSide":"bottom","toNode":"92b84000dbea27ba","toSide":"top"},
+		{"id":"85d7e5704d57d4f7","fromNode":"2eb25e0dab8e781c","fromSide":"bottom","toNode":"7ca5d0e0f42ed732","toSide":"top"},
+		{"id":"3c4fff7e35154579","fromNode":"7ca5d0e0f42ed732","fromSide":"right","toNode":"ceb13a41ff77c1b6","toSide":"top"},
+		{"id":"4839fc04e26282f9","fromNode":"ceb13a41ff77c1b6","fromSide":"left","toNode":"b3dca7355eb2ee52","toSide":"right"}
+	]
+}
