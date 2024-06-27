@@ -11,14 +11,11 @@
             "id": "78b9f88872d6aad6",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "diagrams/BaseState.user_info.canvas",
-                "viewState": {
-                  "x": -357,
-                  "y": 260,
-                  "zoom": -0.971145137327815
-                }
+                "file": "2024-06-27.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "diagrams/BaseState.user_info.canvas",
+                "file": "2024-06-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "diagrams/BaseState.user_info.canvas",
+                "file": "2024-06-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "diagrams/BaseState.user_info.canvas"
+                "file": "2024-06-27.md"
               }
             }
           }
@@ -149,14 +146,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "78b9f88872d6aad6",
+  "active": "7fe9892ad12a29d9",
   "lastOpenFiles": [
+    "notes",
+    "notes/2024-06-27.md",
+    "2024-06-27.md",
+    "notes",
+    "diagrams/BaseState.user_info.canvas",
     "diagrams/BaseState.saved_hospitals.canvas",
     "flowcharts/set_all_user_data().canvas",
     "flowcharts/flow_standard.canvas",
     "flowcharts/flow_new_user.canvas",
     "flowcharts/flow_login.canvas",
-    "diagrams/BaseState.user_info.canvas",
     "diagrams/BaseState.user_reports.canvas"
   ]
 }
