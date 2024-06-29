@@ -8,16 +8,16 @@
 		{"id":"136360a3a311f74f","type":"text","text":"my_jobs: list - default value is NULL","x":-20,"y":188,"width":286,"height":80},
 		{"id":"5ada28c5035b2b88","type":"text","text":"my_reports: list- default value is NULL","x":-20,"y":306,"width":286,"height":80},
 		{"id":"c05c765a3b752492","type":"text","text":"needs_onboard: bool - default value is True","x":-20,"y":424,"width":286,"height":80},
-		{"id":"0d6706f8846b642e","type":"text","text":"reports: int - default value is 0","x":-20,"y":542,"width":286,"height":80},
+		{"id":"0d6706f8846b642e","type":"text","text":"num_reports: int - default value is 0","x":-20,"y":542,"width":286,"height":80},
 		{"id":"12891edad8e8e0fb","type":"text","text":"saved_hospitals: list - default value is NULL","x":-20,"y":660,"width":286,"height":80},
 		{"id":"7fafebe02b8fb29a","type":"text","text":"trust: int - default value is 0","x":-20,"y":778,"width":286,"height":80},
 		{"id":"8a005669a68c90d9","type":"text","text":"user_id: uuid - jwt provided uuid","x":-20,"y":900,"width":286,"height":80},
 		{"id":"f3a2c97efb386c3d","type":"text","text":"supabase_get_user_info()","x":-629,"y":-48,"width":269,"height":60,"color":"1"},
-		{"id":"fe205bdc109ca204","type":"text","text":"BaseState.set_user_info()","x":-629,"y":70,"width":269,"height":60},
 		{"id":"b06f8d2b28447073","type":"text","text":"BaseState.user_info: dict","x":-624,"y":198,"width":260,"height":60},
-		{"id":"9345757bd9de4a6d","type":"text","text":"supabase_update_user_info()","x":-980,"y":-48,"width":294,"height":60,"color":"1"},
-		{"id":"820f0f54a900f1b6","type":"text","text":"BaseState.update_user_info()","x":-980,"y":70,"width":294,"height":60},
-		{"id":"4057c1ae5860fed9","type":"text","text":"# Supabase\n- public.users","x":-780,"y":-314,"width":230,"height":138,"color":"1"}
+		{"id":"4057c1ae5860fed9","type":"text","text":"# Supabase\n- public.users","x":-780,"y":-314,"width":230,"height":138,"color":"1"},
+		{"id":"fe205bdc109ca204","type":"text","text":"BaseState.set_all_user_data_to_state()","x":-678,"y":70,"width":369,"height":60},
+		{"id":"820f0f54a900f1b6","type":"text","text":"BaseState.update_user_info()","x":-1074,"y":70,"width":294,"height":60},
+		{"id":"9345757bd9de4a6d","type":"text","text":"supabase_update_user_info()","x":-1074,"y":-48,"width":294,"height":50,"color":"1"}
 	],
 	"edges":[
 		{"id":"9dacc893b20a2aec","fromNode":"b06f8d2b28447073","fromSide":"right","toNode":"de95a944f4f20a06","toSide":"left"},

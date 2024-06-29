@@ -1,0 +1,29 @@
+{
+	"nodes":[
+		{"id":"c2fa21a68feb16c4","type":"text","text":"user_claims() must be valid","x":-180,"y":-40,"width":279,"height":60,"color":"3"},
+		{"id":"c148d7c72f6a9a9d","type":"text","text":"# User Data Set\n- user_info contains data in /users table\n- saved_hospitals contains populated hospital data for dashboard from /hospitals\n- user_reports contains report data for dashboard from /reports\n\n","x":-354,"y":700,"width":348,"height":320,"color":"6"},
+		{"id":"935aa62005d7fafa","type":"text","text":"supabase_get_user_info()","x":260,"y":240,"width":260,"height":60,"color":"1"},
+		{"id":"e689da83c1641f73","type":"text","text":"create_new_user()","x":260,"y":-40,"width":260,"height":60},
+		{"id":"2fa8de508efad135","type":"text","text":"if no user info is present","x":265,"y":100,"width":250,"height":60,"color":"3"},
+		{"id":"e3caf707d8af684d","type":"text","text":"supabase_populate_saved_hospital_details()","x":235,"y":380,"width":420,"height":70,"color":"1"},
+		{"id":"55b5842e11f39380","type":"text","text":"supabase_get_user_reports()","x":235,"y":530,"width":420,"height":60,"color":"1"},
+		{"id":"743264cf736f92dc","type":"text","text":"BaseState.user_reports()","x":-312,"y":512,"width":265,"height":60,"color":"4"},
+		{"id":"77664bba69a2d601","x":-312,"y":274,"width":250,"height":60,"color":"4","type":"text","text":"BaseState.user_info()"},
+		{"id":"6058cdee2ed0e281","type":"text","text":"BaseState.saved_hospitals()","x":-329,"y":396,"width":284,"height":54,"color":"4"},
+		{"id":"cb1629cf707f7ef3","type":"text","text":"set_all_user_data_to_state()","x":-329,"y":143,"width":299,"height":69},
+		{"id":"46076bf56ec118cf","type":"text","text":"# Setting User Data\nIn BaseState, all user data is stored in three variables...\n- [[BaseState.user_info.canvas|BaseState.user_info]]\n- saved_hospitals\n- user_reports\n\n","x":-113,"y":-380,"width":348,"height":250,"color":"6"},
+		{"id":"8993d6083aaf2d2f","type":"text","text":"# Exception Handling\nset_all_user_data() should only be used within a try except block as the function will raise exceptions but doesn't handle exceptions.\n- DuplicateUserError - pulled multiple user info from one user_id.\n- ReadError - expected to retrieve data but recieved empty response.\n- RequestError - request to database failed.\n\n\n","x":140,"y":700,"width":348,"height":420,"color":"6"}
+	],
+	"edges":[
+		{"id":"0e27b9e5d6ba9193","fromNode":"e689da83c1641f73","fromSide":"right","toNode":"935aa62005d7fafa","toSide":"right"},
+		{"id":"0902ea762ef24615","fromNode":"46076bf56ec118cf","fromSide":"bottom","toNode":"cb1629cf707f7ef3","toSide":"top"},
+		{"id":"86e1142918fb9299","fromNode":"cb1629cf707f7ef3","fromSide":"right","toNode":"935aa62005d7fafa","toSide":"left"},
+		{"id":"5c7e5f3354af8f52","fromNode":"cb1629cf707f7ef3","fromSide":"right","toNode":"e3caf707d8af684d","toSide":"left"},
+		{"id":"32facfb8d88c8101","fromNode":"cb1629cf707f7ef3","fromSide":"right","toNode":"55b5842e11f39380","toSide":"left"},
+		{"id":"d0b6b62454d0536d","fromNode":"935aa62005d7fafa","fromSide":"top","toNode":"e689da83c1641f73","toSide":"bottom"},
+		{"id":"28887f5179996394","fromNode":"cb1629cf707f7ef3","fromSide":"bottom","toNode":"c148d7c72f6a9a9d","toSide":"top"},
+		{"id":"a5994acdb9a8bcb2","fromNode":"935aa62005d7fafa","fromSide":"left","toNode":"77664bba69a2d601","toSide":"right"},
+		{"id":"9b1c94f007fff569","fromNode":"e3caf707d8af684d","fromSide":"left","toNode":"6058cdee2ed0e281","toSide":"right"},
+		{"id":"50431d6bf978183e","fromNode":"55b5842e11f39380","fromSide":"left","toNode":"743264cf736f92dc","toSide":"right"}
+	]
+}
