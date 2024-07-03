@@ -2,13 +2,13 @@
 	"nodes":[
 		{"id":"95a255d50b606cb8","type":"text","text":"supabase_populate_saved_hospital_details()","x":-62,"y":-60,"width":436,"height":50,"color":"1"},
 		{"id":"b6847556baf68015","type":"text","text":"# Supabase\n- public.users","x":-176,"y":-320,"width":230,"height":138,"color":"1"},
-		{"id":"b0f81757c147316a","type":"text","text":"hosp_id","x":300,"y":210,"width":250,"height":60},
-		{"id":"bedd014538675ea9","type":"text","text":"hosp_state","x":300,"y":411,"width":250,"height":60},
-		{"id":"e50511b427f6c6b6","type":"text","text":"hosp_name","x":300,"y":311,"width":250,"height":60},
 		{"id":"a42dca4e6e20e20a","type":"text","text":"BaseState.event_state_remove_set_hospital()","x":-469,"y":40,"width":407,"height":60},
 		{"id":"89a8ef0961d097b6","type":"text","text":"BaseState.set_all_user_data_to_state()","x":-30,"y":40,"width":373,"height":60},
 		{"id":"14f6223c6ef3b7f7","type":"text","text":"supabase_update_user_info()","x":-415,"y":-70,"width":300,"height":60,"color":"1"},
-		{"id":"87385f0b1c3e03e4","type":"text","text":"BaseState.saved_hospitals: list[dict]","x":-239,"y":210,"width":357,"height":60}
+		{"id":"87385f0b1c3e03e4","type":"text","text":"BaseState.saved_hospitals: list[dict]","x":-239,"y":210,"width":357,"height":60},
+		{"id":"b0f81757c147316a","type":"text","text":"hosp_id","x":280,"y":300,"width":250,"height":60},
+		{"id":"bedd014538675ea9","type":"text","text":"hosp_state","x":280,"y":501,"width":250,"height":60},
+		{"id":"e50511b427f6c6b6","type":"text","text":"hosp_name","x":280,"y":401,"width":250,"height":60}
 	],
 	"edges":[
 		{"id":"9f566f4690f0e535","fromNode":"87385f0b1c3e03e4","fromSide":"right","toNode":"e50511b427f6c6b6","toSide":"left"},

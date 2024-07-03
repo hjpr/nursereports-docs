@@ -1,0 +1,14 @@
+{
+	"nodes":[
+		{"id":"d856ee0e4c1509e6","type":"text","text":"# Editing a Report\nUser is allowed to edit their own reports.\n- Ensure report is present in user_reports\n- Retrieve report from database.\n- Populate that report to the state.\n- Submit edited report back to database.","x":-20,"y":-600,"width":395,"height":300,"color":"6"},
+		{"id":"95cf492cc59278a5","type":"text","text":"BaseState.event_state_edit_user_report()","x":-120,"y":-82,"width":376,"height":60},
+		{"id":"96ba914e57f16ce2","x":-64,"y":-220,"width":242,"height":83,"color":"4","type":"text","text":"report_id must be present in user_reports"},
+		{"id":"ba68b47397f9baed","x":-76,"y":200,"width":288,"height":60,"type":"text","text":"save_report_dict_to_state()"},
+		{"id":"edcbc796f05087c0","x":-57,"y":33,"width":250,"height":112,"color":"4","type":"text","text":"pulls report_id and hospital_id to state from report dict"},
+		{"id":"9e315394f1b2c00f","x":426,"y":-125,"width":250,"height":60,"type":"text","text":"supabase_"}
+	],
+	"edges":[
+		{"id":"c6998902efe9648c","fromNode":"d856ee0e4c1509e6","fromSide":"bottom","toNode":"95cf492cc59278a5","toSide":"top"},
+		{"id":"2dc740d4ec57a17b","fromNode":"95cf492cc59278a5","fromSide":"bottom","toNode":"ba68b47397f9baed","toSide":"top"}
+	]
+}
