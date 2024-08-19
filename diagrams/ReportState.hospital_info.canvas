@@ -1,15 +1,17 @@
 {
 	"nodes":[
-		{"id":"2b953dcec6844c8d","type":"text","text":"hosp_id: str","x":491,"y":-257,"width":250,"height":60},
-		{"id":"5236256bd53646ba","type":"text","text":"hosp_name: str","x":491,"y":-100,"width":250,"height":60},
-		{"id":"c15b94e6ec3960cb","type":"text","text":"hosp_addr: str","x":491,"y":-180,"width":250,"height":60},
-		{"id":"39e56141012184cd","type":"text","text":"hosp_city: str","x":491,"y":-20,"width":250,"height":60},
-		{"id":"0f40cbafabe48fab","type":"text","text":"hosp_state: str","x":491,"y":60,"width":250,"height":60},
-		{"id":"8b799b415dafca8a","type":"text","text":"hosp_zip: str","x":491,"y":140,"width":250,"height":60},
-		{"id":"7fc4b726de4c99a3","type":"text","text":"hosp_county: str","x":491,"y":220,"width":250,"height":60},
 		{"id":"0a280fb6bbf0df75","type":"text","text":"supabase_get_hospital_info","x":-40,"y":-147,"width":350,"height":60,"color":"1"},
 		{"id":"f95208f22c4bdfbc","type":"text","text":"ReportState.hospital_info: dict","x":-40,"y":-20,"width":350,"height":60},
-		{"id":"d680f6e0c7910f5b","type":"text","text":"# Supabase\n- public.hospitals","x":20,"y":-400,"width":230,"height":138,"color":"1"}
+		{"id":"d680f6e0c7910f5b","type":"text","text":"# Supabase\n- public.hospitals","x":20,"y":-400,"width":230,"height":138,"color":"1"},
+		{"id":"0f40cbafabe48fab","type":"text","text":"hosp_state: str","x":500,"y":-3,"width":250,"height":60},
+		{"id":"8b799b415dafca8a","type":"text","text":"hosp_zip: str","x":500,"y":77,"width":250,"height":60},
+		{"id":"7fc4b726de4c99a3","type":"text","text":"hosp_county: str","x":500,"y":157,"width":250,"height":60},
+		{"id":"c6a7afbc764ba9de","type":"text","text":"hosp_units: list","x":500,"y":237,"width":250,"height":60},
+		{"id":"0869706dfb688d0c","type":"text","text":"hosp_areas_roles: list","x":500,"y":317,"width":250,"height":60},
+		{"id":"2b953dcec6844c8d","type":"text","text":"hosp_id: str","x":500,"y":-320,"width":250,"height":60},
+		{"id":"39e56141012184cd","type":"text","text":"hosp_city: str","x":500,"y":-83,"width":250,"height":60},
+		{"id":"c15b94e6ec3960cb","type":"text","text":"hosp_addr: str","x":500,"y":-243,"width":250,"height":60},
+		{"id":"5236256bd53646ba","type":"text","text":"hosp_name: str","x":500,"y":-163,"width":250,"height":60}
 	],
 	"edges":[
 		{"id":"451e5ea6a048d492","fromNode":"f95208f22c4bdfbc","fromSide":"right","toNode":"2b953dcec6844c8d","toSide":"left"},
@@ -20,6 +22,8 @@
 		{"id":"b550ec4d0e87dd2d","fromNode":"f95208f22c4bdfbc","fromSide":"right","toNode":"8b799b415dafca8a","toSide":"left"},
 		{"id":"a7596bf8e1544fb7","fromNode":"f95208f22c4bdfbc","fromSide":"right","toNode":"7fc4b726de4c99a3","toSide":"left"},
 		{"id":"5a84843c4ab4fc6e","fromNode":"d680f6e0c7910f5b","fromSide":"bottom","toNode":"0a280fb6bbf0df75","toSide":"top"},
-		{"id":"c59735e60f4a8b38","fromNode":"0a280fb6bbf0df75","fromSide":"bottom","toNode":"f95208f22c4bdfbc","toSide":"top"}
+		{"id":"c59735e60f4a8b38","fromNode":"0a280fb6bbf0df75","fromSide":"bottom","toNode":"f95208f22c4bdfbc","toSide":"top"},
+		{"id":"bfbdc7fcba2f8f9f","fromNode":"f95208f22c4bdfbc","fromSide":"right","toNode":"c6a7afbc764ba9de","toSide":"left"},
+		{"id":"f47933cd7d8be258","fromNode":"f95208f22c4bdfbc","fromSide":"right","toNode":"0869706dfb688d0c","toSide":"left"}
 	]
 }

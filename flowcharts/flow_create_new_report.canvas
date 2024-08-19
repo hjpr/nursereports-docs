@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"90860cadc4e78543","type":"text","text":"ReportState.event_state_create_full_report()","x":-480,"y":-440,"width":412,"height":60},
+		{"id":"ec0c4f6ea1f56391","type":"text","text":"supabase_get_hospital_info()","x":60,"y":-440,"width":286,"height":60,"color":"1"},
+		{"id":"dc3ba2154746e12a","type":"text","text":"generate_report_id()","x":63,"y":-340,"width":280,"height":60},
+		{"id":"77e15374289ef7d1","type":"text","text":"reset()","x":63,"y":-540,"width":280,"height":60},
+		{"id":"1f55fac0dee18d6d","type":"text","text":"# Create New Report Results\n- ReportState.hospital_id is set to CMS ID ✅\n- [[ReportState.hospital_info.canvas|ReportState.hospital_info]] is populated ✅\n- ReportState.mode is set to \"new\" ✅\n- ReportState.report_id is freshly generated ✅\n- User is redirected to the report overview page ✅","x":-580,"y":-180,"width":480,"height":240,"color":"6"},
+		{"id":"180bdc0c3e2eeb72","type":"text","text":"# Exception Handling\n- RequestFailed - request to pull info failed","x":20,"y":-180,"width":430,"height":120,"color":"6"},
+		{"id":"505568e9a4326a6b","type":"text","text":"# Create New Report\nUser can create a new report from either the hospital page, or from the search page.\n\n1. Resets all ReportState variables\n2. Sets hospital_id to the ReportState\n3. Sets mode to \"new\"\n4. Generates a new report_id\n5. Redirects to \"/report/full-report/overview\"","x":-360,"y":-960,"width":449,"height":314,"color":"6"}
+	],
+	"edges":[
+		{"id":"3c25f05e12836ba2","fromNode":"ec0c4f6ea1f56391","fromSide":"bottom","toNode":"dc3ba2154746e12a","toSide":"top"},
+		{"id":"4f7123892159a5b4","fromNode":"dc3ba2154746e12a","fromSide":"left","toNode":"90860cadc4e78543","toSide":"right"},
+		{"id":"cd2a2c13917cdf68","fromNode":"90860cadc4e78543","fromSide":"right","toNode":"77e15374289ef7d1","toSide":"left"},
+		{"id":"2ce85a03d2d29e9f","fromNode":"77e15374289ef7d1","fromSide":"bottom","toNode":"ec0c4f6ea1f56391","toSide":"top"},
+		{"id":"c554905f70428275","fromNode":"505568e9a4326a6b","fromSide":"bottom","toNode":"90860cadc4e78543","toSide":"top"},
+		{"id":"65a963a188359978","fromNode":"90860cadc4e78543","fromSide":"bottom","toNode":"1f55fac0dee18d6d","toSide":"top"}
+	]
+}
