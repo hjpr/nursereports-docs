@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"15a93b9cf0545947","type":"text","text":"ReportState.submit_full_report()","x":-200,"y":140,"width":333,"height":60},
+		{"id":"167c22007cd6afce","type":"text","text":"# Submit New Report\nThe series of steps when a user submits a new full report.\n\n1. Checks that report info is complete and valid.\n2. Ensures report UUID is unique.\n3. Checks that user isn't submitting new report for same unit within 30 days.\n4. Submits report to /reports database.\n5. Gives user credit for report.\n6. Syncs unit/area/role info with /hospitals for new reports.\n7. Submits to anyscale endpoint for moderation.\n8. Resets ReportState vars.\n","x":-340,"y":-440,"width":553,"height":420,"color":"6"},
+		{"id":"c12ece5e5ce69c50","type":"text","text":"# Submit New Report Result\n- Report is complete and valid. ✅\n- Report UUID is unique. ✅\n- User can't create multiple reviews for the same unit within a 30 day window. ✅\n- User recieves credit for report. ✅\n- Hospital units/areas/roles are up to date with reports. ✅\n- User inputs are moderated. ✅\n- User is redirected to the final report page. ✅","x":-220,"y":720,"width":527,"height":388,"color":"6"},
+		{"id":"3f5304ae01cd2fda","type":"text","text":"novel unit/area/role","x":720,"y":300,"width":220,"height":60,"color":"4"},
+		{"id":"5faa52fe6dcf83df","type":"text","text":"existing unit/area/role","x":340,"y":360,"width":250,"height":60,"color":"4"},
+		{"id":"07f0230cece4b448","type":"text","text":"supabase_update_hospital_units()","x":860,"y":400,"width":336,"height":60,"color":"1"},
+		{"id":"752bfe151b758f05","type":"text","text":"supabase_update_hospital_area_role()","x":840,"y":500,"width":362,"height":60,"color":"1"},
+		{"id":"e8bbb2d871f997a0","type":"text","text":"moderate_user_entries()","x":360,"y":580,"width":250,"height":60},
+		{"id":"abb8df31ab1f0635","type":"text","text":"prepare_report_dict()","x":457,"y":-200,"width":250,"height":60},
+		{"id":"ad5f08ad49076041","type":"text","text":"supabase_no_report_id_conflict()","x":419,"y":-107,"width":326,"height":60,"color":"1"},
+		{"id":"597e1c623e1fbee5","type":"text","text":"supabase_check_for_existing_report()","x":400,"y":-7,"width":364,"height":60,"color":"1"},
+		{"id":"4bee18a09d2c7ac1","type":"text","text":"supabase_submit_full_report()","x":430,"y":93,"width":304,"height":60,"color":"1"},
+		{"id":"58ab75a9633616d3","type":"text","text":"supabase_update_user_info()","x":438,"y":188,"width":289,"height":60,"color":"1"}
+	],
+	"edges":[
+		{"id":"f9420722867afb3e","fromNode":"15a93b9cf0545947","fromSide":"right","toNode":"abb8df31ab1f0635","toSide":"left"},
+		{"id":"75d0f9f1e0c940b7","fromNode":"abb8df31ab1f0635","fromSide":"bottom","toNode":"ad5f08ad49076041","toSide":"top"},
+		{"id":"fa6903f2b80e701d","fromNode":"ad5f08ad49076041","fromSide":"bottom","toNode":"597e1c623e1fbee5","toSide":"top"},
+		{"id":"fd30c7c2477de3cb","fromNode":"597e1c623e1fbee5","fromSide":"bottom","toNode":"4bee18a09d2c7ac1","toSide":"top"},
+		{"id":"22790eb0d7b612ad","fromNode":"4bee18a09d2c7ac1","fromSide":"bottom","toNode":"58ab75a9633616d3","toSide":"top"},
+		{"id":"9015863c0f42bcb0","fromNode":"58ab75a9633616d3","fromSide":"bottom","toNode":"e8bbb2d871f997a0","toSide":"top"},
+		{"id":"10265ca9744e4494","fromNode":"58ab75a9633616d3","fromSide":"right","toNode":"07f0230cece4b448","toSide":"left"},
+		{"id":"4d4c182b4cf574cc","fromNode":"58ab75a9633616d3","fromSide":"right","toNode":"752bfe151b758f05","toSide":"left"},
+		{"id":"4e6ab218d1dbd408","fromNode":"07f0230cece4b448","fromSide":"bottom","toNode":"e8bbb2d871f997a0","toSide":"right"},
+		{"id":"e0a09aab06786cca","fromNode":"752bfe151b758f05","fromSide":"bottom","toNode":"e8bbb2d871f997a0","toSide":"right"},
+		{"id":"9d36c7778dbe011d","fromNode":"167c22007cd6afce","fromSide":"bottom","toNode":"15a93b9cf0545947","toSide":"top"},
+		{"id":"4a620590c6e74a2b","fromNode":"e8bbb2d871f997a0","fromSide":"bottom","toNode":"c12ece5e5ce69c50","toSide":"top"}
+	]
+}
